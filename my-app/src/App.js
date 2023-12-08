@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import About from './component/About';
+// import About from './component/About';
 // import Growup from './component/button';
 import OrgNavBar from './component/orgNavBar';
 import TextForms from './component/textForms';
 import Alert from './component/alert';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [Mode,setMode]=useState('light');
