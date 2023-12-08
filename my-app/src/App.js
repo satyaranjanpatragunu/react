@@ -26,7 +26,6 @@ function App() {
   document.body.style.backgroundColor='#363391';
   ShowAlert("success","DARK MODE IS ENABLED");
   document.title='Textutil-Darkmode';
-  <h1>Hi satya</h1>
   // setInterval(() => {
   //   document.title=' INstall-Textutil-is-Awasome';
   // }, 2000);
