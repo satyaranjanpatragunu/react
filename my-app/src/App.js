@@ -46,20 +46,20 @@ function App() {
   return (
     <>
     
-   <BrowserRouter>
+   {/* <BrowserRouter> */}
    <OrgNavBar title="Title Utils"  textAbout="About" mode={Mode} button={toggleMode}/>
        <Alert alert={alert}/>
         <div className="container my-3" mode={Mode}>
-          <Routes>
-            <Route exact path="/about" element={<About />}></Route>
-            <Route
-              exact path="/home" element={
+          {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About />}></Route> */}
+            {/* <Route */}
+              {/* exact path="/home" element={ */}
                  <TextForms heading="Enter the text satya" ShowAlert={ShowAlert}  mode={Mode}/> 
-                }>
-            </Route>
-          </Routes>
+                {/* }> */}
+            {/* </Route> */}
+          {/* </Routes> */}
         </div>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
  {/* <Growup />     */}
     </>
   );
