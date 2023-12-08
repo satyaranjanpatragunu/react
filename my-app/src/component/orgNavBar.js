@@ -13,11 +13,11 @@ export default function Navbar(props){
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
           {/* <Link className="nav-link active" aria-current="page" to="/home">Home</Link> */}
-          <a className="nav-link active" aria-current="page" href="/home">Home</a>
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
 
         </li>
         <li className="nav-item mx-3">
-          <a className="nav-link" href="/about">{props.textAbout}</a>
+          <a className="nav-link" href="/">{props.textAbout}</a>
         </li>
        
       </ul>
