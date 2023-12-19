@@ -36,18 +36,42 @@ export default function TextForms(props) {
 
     }
 const[text,setText]=useState('satya enter the text');//here text is a variable and inside the use state are the value assign to it
-
+ let objectButton=[
+  {
+    title:"Convert To upper case",
+    obj:handleOnclick,
+  },
+  {
+    title:"Convert To lower case",
+    obj:handleToUpperCase,
+  },
+  {
+    title:"Clear all",
+    obj:handleToclear,
+  },
+  {
+    title:"COPY ALL TEXT",
+    obj:handleCopy,
+  },
+  {
+    title:"REMOVE EXTRA SPACES",
+    obj:handelExtraspace,
+  },
+  
+ ]
   return (
   <>
 <div className={`container my-3 text-${props.mode==='light'?'dark':'light'}`}>
   <h1>{props.heading}</h1>
   <textarea className={`form-control bg-${props.mode} text-${props.mode==='light'?'dark':'light'}`} id="my-box" value={text} onChange={handelOnChng} rows="8"></textarea>
 </div>
-<button type="button" className="btn btn-primary mx-1" onClick={handleOnclick}>Convert To upper case</button>
-<button type="button" className="btn btn-primary mx-1" onClick={handleToUpperCase}>Convert To lower case</button>
-<button type="button" className="btn btn-primary mx-1" onClick={handleToclear}>Clear</button>
-<button type="button" className="btn btn-primary mx-1" onClick={handleCopy}>Copy</button>
-<button type="button" className="btn btn-primary mx-1" onClick={handelExtraspace}>Remove Space</button>
+
+
+  {objectButton.map((item)=>{
+   return( 
+    <button type="button" className="btn btn-primary mx-1" onClick={item.obj}>{item.title}</button>
+    )
+})}
 
 
 

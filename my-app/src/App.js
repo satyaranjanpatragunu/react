@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-// import About from './component/About';
+import About from './component/About';
 // import Growup from './component/button';
 import OrgNavBar from './component/orgNavBar';
 import TextForms from './component/textForms';
 import Alert from './component/alert';
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [Mode,setMode]=useState('light');
@@ -46,20 +46,20 @@ function App() {
   return (
     <>
     
-   {/* <BrowserRouter> */}
+   <BrowserRouter>
    <OrgNavBar title="Title Utils"  textAbout="About" mode={Mode} button={toggleMode}/>
        <Alert alert={alert}/>
         <div className="container my-3" mode={Mode}>
-          {/* <Routes> */}
-            {/* <Route exact path="/about" element={<About />}></Route> */}
-            {/* <Route */}
-              {/* exact path="/home" element={ */}
+          <Routes>
+            <Route exact path="/about" element={<About />}></Route>
+            <Route
+               exact path="/home" element={ 
                  <TextForms heading="Enter the text satya" ShowAlert={ShowAlert}  mode={Mode}/> 
-                {/* }> */}
-            {/* </Route> */}
-          {/* </Routes> */}
+                  }> 
+            </Route>
+          </Routes>
         </div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
  {/* <Growup />     */}
     </>
   );
